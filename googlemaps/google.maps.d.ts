@@ -331,6 +331,8 @@ declare module google.maps {
     /***** Overlays *****/
     export class Marker extends MVCObject {
         static MAX_ZINDEX: number;
+        airport: BrewSoftware.Models.Airport;
+        infoWindow: google.maps.InfoWindow;
         constructor(opts?: MarkerOptions);
         getAnimation(): Animation;
         getAttribution(): Attribution;
@@ -629,6 +631,8 @@ declare module google.maps {
         setOptions(options: PolylineOptions): void;
         setPath(path: MVCArray|LatLng[]|LatLngLiteral[]): void; // MVCArray<LatLng>|Array<LatLng|LatLngLiteral>
         setVisible(visible: boolean): void;
+        markers: google.maps.Marker[];
+        route: BrewSoftware.Models.Route;
     }
 
     export interface PolylineOptions {
