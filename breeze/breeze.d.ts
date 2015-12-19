@@ -11,6 +11,7 @@
 // Updated Jan 16 2015 for Breeze 1.4.17 to add support for noimplicitany - Kevin Wilson ( www.kwilson.me.uk )
 // Updated Jan 20 2015 for Breeze 1.5.2 and merging changes from DefinitelyTyped
 // Updated Feb 28 2015 add any/all clause on Predicate
+// Updated Dec 20 2015 add model binding props for Display Name, add enum binding props.
 
 declare module breeze.core {
 
@@ -147,6 +148,9 @@ declare module breeze {
     }
 
     class DataProperty implements IProperty {
+        displayName: string; // Added for model binding to server side display name
+        enum: string; // Added for enum binding
+
         complexTypeName: string;
         concurrencyMode: string;
         dataType: DataTypeSymbol;
@@ -158,7 +162,6 @@ declare module breeze {
         isNullable: boolean;
         isPartOfKey: boolean;
         isUnmapped: boolean;
-
         maxLength: number;
         name: string;
         nameOnServer: string;
