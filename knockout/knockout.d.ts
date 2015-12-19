@@ -5,8 +5,7 @@
 
 
 interface KnockoutSubscribableFunctions<T> {
-    [key: string]: KnockoutBindingHandler;
-
+    [key: string]: KnockoutBindingHandler | any;
 	notifySubscribers(valueToWrite?: T, event?: string): void;
 }
 
