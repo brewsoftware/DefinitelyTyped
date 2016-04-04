@@ -32,7 +32,7 @@ declare namespace AltJS {
     //events
     onSerialize?(fn:(data:any) => any):void;
     onDeserialize?(fn:(data:any) => any):void;
-    on?(event:AltJS.lifeCycleEvents, callback:() => any):void;
+    on?(event:AltJS.lifeCycleEvents|string, callback:() => any):void;
     emitChange?():void;
     waitFor?(storeOrStores:AltStore<any> | Array<AltStore<any>>):void;
     otherwise?(data:any, action:AltJS.Action<any>):void;
