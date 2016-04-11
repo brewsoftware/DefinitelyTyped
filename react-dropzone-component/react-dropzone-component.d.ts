@@ -18,6 +18,7 @@ declare namespace ReactDropzoneComponent {
         className?: string;
         activeClassName?: string;
         rejectClassName?: string;
+        djsConfig?: Object;
         /**
         * Clicking the <Dropzone> brings up the browser file picker. To disable, set to true.
         */
@@ -33,6 +34,8 @@ declare namespace ReactDropzoneComponent {
         * audio/aiff,audio/midi
         */
         accept?: string;
+        id?: string;
+        ref?: string;
     }
 
     export class Dropzone extends React.Component<DropzoneProps, {}> {
@@ -44,4 +47,3 @@ declare module "react-dropzone-component" {
     const Dropzone: typeof ReactDropzoneComponent.Dropzone;
     export = Dropzone;
 }
-
